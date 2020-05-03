@@ -20,7 +20,6 @@ export class LatestNewsListComponent implements OnInit {
     {
       this.news = response;
   }, (error) =>{
-    alert("Getting Error response");
     error = error;
     return false;
   }
