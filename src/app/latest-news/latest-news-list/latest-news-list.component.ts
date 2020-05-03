@@ -25,20 +25,4 @@ export class LatestNewsListComponent implements OnInit {
   }
     )
 }
-
- getTotalCount():number{
-  this.latestNewsService.getCovidNews().subscribe(
-    (response) =>
-  {
-    this.news = response;
-    this.count = this.news.length;
-    return this.count;
-  }, (error) =>{
-  alert("Getting Error response");
-  error = error;
-  return -1;
-  }
-  )
-  return this.count;
- }
 }
