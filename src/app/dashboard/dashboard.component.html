@@ -1,0 +1,26 @@
+<div class="container">
+    <div style="margin-top: 8%;">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>State</th>
+        <th>Total Confirmed</th>
+        <th>Active</th>
+        <th>Deceased</th>
+        <th>Recovered</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of _statedata?.statewise ; let i=index">
+        <td><a routerLink="/statedata" [queryParams]="{'state':data.state}" >{{data.state}}</a></td>
+        <td>{{data.confirmed}}</td>
+        <td>{{data.active}}</td>
+        <td>{{data.deaths}}</td>
+        <td>{{data.recovered}}</td>
+      </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+  
+  <router-outlet></router-outlet>

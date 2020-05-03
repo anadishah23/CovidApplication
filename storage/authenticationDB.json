@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "nimda"
+    },
+    {
+      "username": "anadi",
+      "password": "anadi@123"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "newsTitle": "UK doctor alerts Indians",
+      "description": "UK doctor alerts Indians to poor diet link with COVID-19 deaths",
+      "summary": "UK doctor alerts Indians to poor diet link with COVID-19 deaths",
+      "fullNews": "India is particularly vulnerable, having a very high prevalence of lifestyle related diseases, according to a leading Indian-origin cardiologist in the UK. South Asians have been found vulnerable because the prevalence of metabolic syndrome is three-four-fold higher in the population",
+      "imagePath": "https://images.livemint.com/img/2020/05/03/600x338/361605535_0-11_1588132678420_1588478533761.jpg"
+    },
+    {
+      "id": 2,
+      "newsTitle": "Coronavirus update",
+      "description": "Coronavirus update: With 2,487 fresh cases in 24 hours, India's Covid-19 count shoots past 40,000. State-wise tally",
+      "summary": "With 73 more deaths, the death toll in the country increased to 1,306",
+      "fullNews": "With 73 more deaths, the death toll in the country increased to 1,306. Maharashtra continued to be the worst-hit state with the total number of Covid-19 cases rising to 12,296 with 521 deaths.",
+      "imagePath": "https://images.livemint.com/img/2020/05/03/600x338/20200503132L_1588505760843_1588505783784.jpg"
+    },
+    {
+      "id": 10,
+      "newsTitle": "Coronavirus India News LIVE Updates",
+      "description": "Coronavirus India News LIVE Updates: Delhi fully ready to relax lockdown restrictions, says Arvind Kejriwal",
+      "summary": "Coronavirus India News LIVE Updates: Delhi fully ready to relax lockdown restrictions, says Arvind Kejriwal",
+      "fullNews": "The novel coronavirus, or COVID-19, pandemic has spread across 187 countries and territories. Today is the fortieth day of India’s nationwide lockdown, which has been extended till May 17. Restrictions have been eased in non-hotspot areas. Confirmed COVID-19 cases in India stand at 39,980. The death toll from the outbreak in India is at 1,301. Maharashtra, Gujarat and Delhi have reported the highest number of cases. Indian armed forces will be thanking 'corona warriors' today.",
+      "imagePath": "https://static.toiimg.com/thumb/msid-75513091,height-127,resizemode-4,imgsize-259651.cms"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!-- <p>state works!</p>
+
+<div style="margin-top: 20%; background:blue;" *ngFor = "let a of _districtData | keyvalue">
+    sdfdsfdsafdsafds
+
+  
+    
+          <span class="badge">{{a | json}}</span>
+     
+
+</div> -->
+
+<div class="container">
+    <div style="margin-top: 8%;">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>State</th>
+        <th>Active</th>
+        <th>Deceased</th>
+        <th>Recovered</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr  *ngFor = "let data of _districtData | keyvalue ; let i=index">
+        
+        <td>{{data.key}}</td>
+        <td>{{data.value.active}}</td>
+        <td>{{data.value.deceased}}</td>
+        <td>{{data.value.recovered}}</td>
+        
+      </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+
+
+
+
+
+

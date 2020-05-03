@@ -1,0 +1,128 @@
+
+
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-lg-11 mx-auto">
+      
+      <div class="bg-white rounded-lg shadow-sm p-5">
+
+        <div class="row mb-4">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4">Add News</h1>
+            
+          </div>
+        </div>
+
+        <div class="tab-content">
+
+          <div id="nav-tab-card" class="tab-pane fade show active">
+            
+            <form novalidate [formGroup]="addNewsForm" (ngSubmit)="onSubmit(addNewsForm.value)">
+
+              <div class="form-group">
+                <label for="name">Input Id</label>
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="id"
+                  placeholder="Please input the unique id number"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid':
+                      (addNewsForm.get('id').touched || addNewsForm.get('id').dirty) &&
+                      !addNewsForm.get('id').valid
+                  }"/> 
+              </div>
+              <div class="form-group">
+                <label for="name">Title</label>
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="newsTitle"
+                  class="form-control"
+                  placeholder="Enter the news Title to display"
+                  [ngClass]="{
+                    'is-invalid':
+                      (addNewsForm.get('newsTitle').touched || addNewsForm.get('newsTitle').dirty) &&
+                      !addNewsForm.get('newsTitle').valid
+                  }"/>
+              </div>
+  
+                <div class="form-group">
+                  <label for="summay">Summary</label>
+                  <input
+                    type="text"
+                    id="summary"
+                    formControlName="summary"
+                    placeholder="Summary...."
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        (addNewsForm.get('summary').touched || addNewsForm.get('summary').dirty) &&
+                        !addNewsForm.get('summary').valid
+                    }"/>
+                </div>
+             
+              <div class="form-group">
+                <label for="imagePath">Image URL</label>
+                <input
+                  type="text"
+                  id="imagePath"
+                  formControlName="imagePath"
+                  class="form-control"
+                  placeholder="Please provide the URL of the Image"
+                  #imagePath
+                  [ngClass]="{
+                    'is-invalid':
+                      (addNewsForm.get('imagePath').touched || addNewsForm.get('imagePath').dirty) &&
+                      !addNewsForm.get('imagePath').valid
+                  }"/>
+              </div>
+        
+  
+              <img [src]="imagePath.value" class="img-responsive">
+          
+         
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  type="text"
+                  id="description"
+                  class="form-control"
+                  formControlName="description"
+                  placeholder="Description....."
+                  rows="6"
+                  [ngClass]="{
+                    'is-invalid':
+                      (addNewsForm.get('description').touched || addNewsForm.get('description').dirty) &&
+                      !addNewsForm.get('description').valid
+                  }">
+                </textarea>
+              </div>
+  
+                <div class="form-group">
+                  <label for="fullNews">Full News</label>
+                  <textarea
+                    type="text"
+                    id="fullNews"
+                    class="form-control"
+                    formControlName="fullNews"
+                    placeholder="Please Enter the Covid-news "
+                    rows="6"
+                    [ngClass]="{
+                      'is-invalid':
+                        (addNewsForm.get('fullNews').touched || addNewsForm.get('fullNews').dirty) &&
+                        !addNewsForm.get('fullNews').valid
+                    }">
+                  </textarea>
+                </div>
+
+                <button
+                type="submit"
+                class="btn btn-success btn-lg"
+                [disabled]="!addNewsForm.valid">Save</button>
+              <button type="button" style="margin-left: 5px;"class="btn btn-danger btn-lg" (click)="onCancel()">Cancel</button>
+
+        </form>
+            
