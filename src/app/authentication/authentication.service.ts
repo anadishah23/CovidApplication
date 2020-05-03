@@ -8,6 +8,8 @@ import { LoggingService } from '../logging.service';
 @Injectable({providedIn:'root'})
 export class AuthService{
 
+
+    private user_url = "https://jsonserverdb.herokuapp.com/users";
     displayName : string ;
     constructor(private http: HttpClient,private Log:LoggingService){
 
@@ -17,7 +19,7 @@ export class AuthService{
     checkLoginCredential(username:string):Observable<User[]>{
         this.displayName = username;
         this.Log.loggingSuccess("Users data successfully fetched");
-        return this.http.get<User[]>('api/users?username='+username);
+        return this.http.get<User[]>(this.user_url+'?username='+username);
          
     }
 

@@ -15,19 +15,23 @@ export class LatestNewsService{
 
   private newz: NewsInfo;
 
+  private user_url = "https://jsonserverdb.herokuapp.com/users";
+  
+  private news_url = "https://jsonserverdb.herokuapp.com/news";
+
   private newCount : NewsInfo[] = [];
 
   constructor(private http: HttpClient) {
   }
 
   getCovidNews():Observable<NewsInfo[]> {
-    return this.http.get<NewsInfo[]>('api/news');
+    return this.http.get<NewsInfo[]>(this.news_url);
      
   }
 
   addNews(news : NewsInfo):Observable<NewsInfo> {
     console.log(news);
-    return this.http.post<NewsInfo>('/api/news',news,{
+    return this.http.post<NewsInfo>(this.news_url,news,{
       headers : new HttpHeaders({
         'Content-Type' : 'application/json'
       })
